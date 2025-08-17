@@ -1,0 +1,20 @@
+class BankAccount:
+      def __init__(self,name,pin,amount):
+          self.name=name
+          self.__pin=1234
+          self.__amount=amount
+      def getname():
+          return self.name
+      def getamount():
+          if(self__pin==pin):
+             return self.__amount
+      def DepositAmount(amount):
+          self.__amount=self.__amount+amount
+
+b1=BankAccount("Rakesh",123,3000)
+print(b1.getname())
+print(b1.getamount())
+print(b1.DepositAmount(480))
+print(b1.getamount())
+
+      

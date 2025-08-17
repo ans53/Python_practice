@@ -1,3 +1,4 @@
+from add import Add
 #list of only unique elements
 def unique_elements(lst):
      lst1=[]
@@ -61,7 +62,7 @@ print(count_consonant("Ye mera India , I love my Indiyaaaaaaaaa",vowels))
 def reverse_string_words(str): 
     reverse=""
     for i in str:
-        if(str==" ")
+        if(str==" "):
            reverse=i+reverse
           
     return reverse
@@ -70,8 +71,9 @@ print("Reverse of String:",reverse_string_words("Python is Good"))
 
 #Rotate a List
 def rotate_list(lst, k):
+    new_list=[]
     n = len(lst)
-    k = k %     new_list = []
+    k = k %n
     # take last k elements
     for i in range(n - k, n):
         new_list += [lst[i]]
@@ -107,3 +109,4 @@ def diamond_pattern(n):
         print(" " * spaces + "*" * stars)
 
 diamond_pattern(5)
+print(Add(2,3))
