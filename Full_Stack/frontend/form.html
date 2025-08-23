@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form_style.css">
+</head>
+<body>
+    <header class="navbar"><h2>JOBAAJKAL</h2> 
+        <ul class="menu">
+        <li class="item"><a href="#">Home</a></li>
+        <li class="item"><a href="#">About Us</a></li>
+        <li class="item"><a href="#">Contact Us</a></li>
+        <li class="item"><a href="#">Blog</a></li>
+      </ul></header>
+    <form>
+      <div class="signup">
+        <h1>SIGN UP</h1>
+        </div>
+        <label for="username">ENTER NAME</label>
+        <input type="text" id="username">
+        <label for="email"></label>ENTER EMAIL
+        <input type="email" id="email">
+        <label for="password"></label>PASSWORD
+        <input type="password" id="password">
+        <div class="button">
+ <button class="btn" type="submit" onclick="register()">
+              LOGIN
+            </button>
+            </div>
+    </form>
+    <script>
+       async function register() {
+        const res = await fetch("http://127.0.0.1:8000/user/registration/", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            username: document.getElementById("username").value,
+            email: document.getElementById("email").value,
+            password: document.getElementById("password").value,
+          }),
+        });
+        const data = await res.json();
+        console.log(data);
+      }
+
+
+     
+    </script>
+</body>
+</html>
